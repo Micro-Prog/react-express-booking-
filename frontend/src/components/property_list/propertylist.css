@@ -1,0 +1,31 @@
+.property_list {
+    width: 100%;
+    max-width: 1024px;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.place_item {
+    flex: 1;
+    border-radius: 15px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.property_img {
+    width: 100%;
+    height: 150px;
+    border-radius: 15px;
+    object-fit: cover;
+    border: 1px solid var(--dark-blue);
+}
+
+.property_titles > h1 {
+    font-size: 18px;
+}
+
+.property_titles > h2 {
+    font-size: 14px;
+}
+

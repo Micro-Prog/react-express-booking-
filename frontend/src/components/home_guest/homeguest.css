@@ -1,0 +1,43 @@
+.home_guest {
+    width: 100%;
+    max-width: 1024px;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.home_guest_item {
+    flex: 1;
+    gap: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.home_guest_img {
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid var(--light-blue);
+}
+
+.home_guest_name {
+    font-weight: bold;
+}
+
+.home_guest_city {
+    font-weight: 300;
+}
+
+.home_guest_price {
+    font-weight: 500;
+}
+
+.home_guest_rating > button {
+    background-color: var(--light-blue);
+    color: white;
+    border: none;
+    padding: 5px;
+    margin-right: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
