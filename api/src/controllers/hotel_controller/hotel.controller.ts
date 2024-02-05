@@ -85,3 +85,45 @@ export const getAllHotels = async (req: Request, res: Response, next: NextFuncti
         next(error);
     }
 }
+
+// define the function for get all hotels by city 
+export const getAllHotelsByCity = async (req: Request, res: Response, next: NextFunction) => {
+    
+    const cities = (<string>req.query.cities)?.split(",");
+
+    // define a custom error
+    // const failed = true;
+    // if (failed) return next(createError(401, "There is a problem."));
+
+    try {
+
+        // find all hotels with those names
+        const list = await Promise.all(cities.map(city => {
+            return Hotel.countDocuments({ city: city });
+        }));
+
+        res.status(200).json(list);
+
+    } catch (error) {
+        next(error);
+    }
+}
+ 
+// define the function for get all hotels by type 
+export const getAllHotelsByType = async (req: Request, res: Response, next: NextFunction) => {
+    
+    // define a custom error
+    // const failed = true;
+    // if (failed) return next(createError(401, "There is a problem."));
+
+    try {
+
+        // find all hotels
+        const hotels = await Hotel.find();
+
+        res.status(200).json(hotels);
+
+    } catch (error) {
+        next(error);
+    }
+}

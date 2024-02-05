@@ -26,9 +26,11 @@ const Home = () => {
         {/* Featured List */}
         <FeaturedList />
         
+        {/* property list */}
         <h1 className='home_title'>Explore by Type ...</h1>
         <PropertyList />
 
+        {/* home guest */}
         <h1 className='home_title'>Homes guests love</h1>
         <HomeGuest />
 
